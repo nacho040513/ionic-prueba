@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-title style="text-align: center"> Bienvenido</ion-title>
+  <ion-card>
+    <ion-item>
+      <img src="../assets/imgs/pubg-hero.jpg" alt="">
+    </ion-item>
+  </ion-card>
+  <ion-card>
+      <form  novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label  color="primary" >Usuario</ion-label>
+        <ion-input ([ngModel])="login.usuario" type="text" placeholder="user"></ion-input>
+       
+      </ion-item>
+      <ion-item>
+        <ion-label  color="primary">Clave</ion-label>
+        <ion-input   ([ngModel])="login.clave" type="password" placeholder="****"></ion-input>
+        
+      </ion-item>
+    </ion-list>
+    </form>
+  </ion-card>
+
+  <ion-item>
+    <button name="btingresar" ion-button full (click)="ingresar()">Ingresar</button>
+    <button ion-button full (click)="pageregistra()" >Registrarse</button>
+  </ion-item>
+  <ion-item style="align-items: center">
+    <button ion-button round (click)="recuperar()">Recuperar Contraseña</button>
+  </ion-item>
+</ion-content>
